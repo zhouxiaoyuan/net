@@ -5,6 +5,7 @@ package com.ge.dao;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Repository;
 
 import com.ge.model.Member;
@@ -20,5 +21,6 @@ public interface MemberDao {
 	
 	public List<Member> getAllMembers();
 	
+	@Cacheable(value="member", key="#realName")
 	public Member getMemberByRealname(String realName);
 }

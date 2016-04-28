@@ -3,6 +3,7 @@ package com.ge.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.ge.dao.MemberDao;
@@ -19,6 +20,7 @@ public class TestService {
 		List<Member> members = memberDao.getAllMembers();
 		return members;
 	}
+	
 	
 	public Member getRealName(String realName){
 		Member member = memberDao.getMemberByRealname(realName);
