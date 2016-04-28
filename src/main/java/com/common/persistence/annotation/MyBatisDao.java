@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
 import org.springframework.stereotype.Component;
 
 /**
- * ±êÊ¶MyBatisµÄDAO,·½±ã{@link org.mybatis.spring.mapper.MapperScannerConfigurer}µÄÉ¨Ãè¡£ 
+ * æ ‡è¯†MyBatisçš„DAO,æ–¹ä¾¿{@link org.mybatis.spring.mapper.MapperScannerConfigurer}çš„æ‰«æã€‚ 
  * @author thinkgem
  * @version 2013-8-28
  */

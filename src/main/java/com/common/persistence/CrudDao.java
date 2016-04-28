@@ -5,8 +5,9 @@ package com.common.persistence;
 
 import java.util.List;
 
+
 /**
- * DAOÖ§³ÖÀàÊµÏÖ
+ * DAOæ”¯æŒç±»å®ç°
  * @author ThinkGem
  * @version 2014-05-16
  * @param <T>
@@ -14,35 +15,35 @@ import java.util.List;
 public interface CrudDao<T> extends BaseDao {
 
 	/**
-	 * »ñÈ¡µ¥ÌõÊı¾İ
+	 * è·å–å•æ¡æ•°æ®
 	 * @param id
 	 * @return
 	 */
 	public T get(String id);
 	
 	/**
-	 * »ñÈ¡µ¥ÌõÊı¾İ
+	 * è·å–å•æ¡æ•°æ®
 	 * @param entity
 	 * @return
 	 */
 	public T get(T entity);
 	
 	/**
-	 * ²éÑ¯Êı¾İÁĞ±í£¬Èç¹ûĞèÒª·ÖÒ³£¬ÇëÉèÖÃ·ÖÒ³¶ÔÏó£¬Èç£ºentity.setPage(new Page<T>());
+	 * æŸ¥è¯¢æ•°æ®åˆ—è¡¨ï¼Œå¦‚æœéœ€è¦åˆ†é¡µï¼Œè¯·è®¾ç½®åˆ†é¡µå¯¹è±¡ï¼Œå¦‚ï¼šentity.setPage(new Page<T>());
 	 * @param entity
 	 * @return
 	 */
 	public List<T> findList(T entity);
 	
 	/**
-	 * ²éÑ¯ËùÓĞÊı¾İÁĞ±í
+	 * æŸ¥è¯¢æ‰€æœ‰æ•°æ®åˆ—è¡¨
 	 * @param entity
 	 * @return
 	 */
 	public List<T> findAllList(T entity);
 	
 	/**
-	 * ²éÑ¯ËùÓĞÊı¾İÁĞ±í
+	 * æŸ¥è¯¢æ‰€æœ‰æ•°æ®åˆ—è¡¨
 	 * @see public List<T> findAllList(T entity)
 	 * @return
 	 */
@@ -50,21 +51,21 @@ public interface CrudDao<T> extends BaseDao {
 	public List<T> findAllList();
 	
 	/**
-	 * ²åÈëÊı¾İ
+	 * æ’å…¥æ•°æ®
 	 * @param entity
 	 * @return
 	 */
 	public int insert(T entity);
 	
 	/**
-	 * ¸üĞÂÊı¾İ
+	 * æ›´æ–°æ•°æ®
 	 * @param entity
 	 * @return
 	 */
 	public int update(T entity);
 	
 	/**
-	 * É¾³ıÊı¾İ£¨Ò»°ãÎªÂß¼­É¾³ı£¬¸üĞÂdel_flag×Ö¶ÎÎª1£©
+	 * åˆ é™¤æ•°æ®ï¼ˆä¸€èˆ¬ä¸ºé€»è¾‘åˆ é™¤ï¼Œæ›´æ–°del_flagå­—æ®µä¸º1ï¼‰
 	 * @param id
 	 * @see public int delete(T entity)
 	 * @return
@@ -73,7 +74,7 @@ public interface CrudDao<T> extends BaseDao {
 	public int delete(String id);
 	
 	/**
-	 * É¾³ıÊı¾İ£¨Ò»°ãÎªÂß¼­É¾³ı£¬¸üĞÂdel_flag×Ö¶ÎÎª1£©
+	 * åˆ é™¤æ•°æ®ï¼ˆä¸€èˆ¬ä¸ºé€»è¾‘åˆ é™¤ï¼Œæ›´æ–°del_flagå­—æ®µä¸º1ï¼‰
 	 * @param entity
 	 * @return
 	 */
