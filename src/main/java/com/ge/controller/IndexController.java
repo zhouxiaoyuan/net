@@ -20,4 +20,12 @@ public class IndexController {
 		model.addAttribute("members", testService.getTest());
 		return "test";
 	}
+	
+	@RequestMapping("/realName")
+	public String getMemberByRealName(String realName ,Model model) {
+		model.addAttribute("member", testService.getRealName(realName));
+		return "member";
+	}
+	
+	
 }

@@ -16,8 +16,13 @@ public class TestService {
 	private MemberDao memberDao;
 
 	public List<Member> getTest(){
-		
 		List<Member> members = memberDao.getAllMembers();
 		return members;
 	}
+	
+	public Member getRealName(String realName){
+		Member member = memberDao.getMemberByRealname(realName);
+		return member;
+	}
+	
 }

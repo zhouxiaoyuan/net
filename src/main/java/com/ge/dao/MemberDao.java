@@ -17,7 +17,8 @@ import com.ge.model.Member;
  */
 @Repository("memberDao")
 public interface MemberDao {
-
 	
 	public List<Member> getAllMembers();
+	
+	public Member getMemberByRealname(String realName);
 }
