@@ -38,7 +38,7 @@
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
         <property name="basePackage" value="com.ge"/>
-        <!--  <property name="annotationClass" value="com.thinkgem.jeesite.common.persistence.annotation.MyBatisDao"/> -->
+        <!-- <property name="annotationClass" value="com.common.persistence.annotation.MyBatisDao"/>  -->
     </bean>
     
     <!-- 定义事务 -->

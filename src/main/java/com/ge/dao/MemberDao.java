@@ -3,16 +3,21 @@
  */
 package com.ge.dao;
 
-import com.common.persistence.CrudDao;
-import com.common.persistence.annotation.MyBatisDao;
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
 import com.ge.model.Member;
+
 
 /**
  * 站点DAO接口
  * @author ThinkGem
  * @version 2013-8-23
  */
-@MyBatisDao
-public interface MemberDao extends CrudDao<Member> {
+@Repository("memberDao")
+public interface MemberDao {
 
+	
+	public List<Member> getAllMembers();
 }

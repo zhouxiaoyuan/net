@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ge.model.Member">
+<mapper namespace="com.ge.dao.MemberDao">
    <resultMap type="com.ge.model.Member" id="Member">
        <id column="id" property="id" jdbcType="BIGINT"></id>
        <id column="membertype" property="membertype" jdbcType="BIGINT"></id>
