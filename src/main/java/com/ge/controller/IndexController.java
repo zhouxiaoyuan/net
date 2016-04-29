@@ -28,4 +28,9 @@ public class IndexController {
 	}
 	
 	
+	@RequestMapping("/bootstrap")
+	public String bootstrap() {
+		return "bootstrap";
+	}
+	
 }
