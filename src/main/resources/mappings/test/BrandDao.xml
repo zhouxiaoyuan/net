@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ge.dao.MemberDao">
+   <resultMap type="com.ge.model.Member" id="Member">
+       <id column="id" property="id" jdbcType="BIGINT"></id>
+       <id column="membertype" property="membertype" jdbcType="BIGINT"></id>
+       <id column="userid" property="userid" jdbcType="VARCHAR"></id>
+       <id column="realname" property="realname" jdbcType="VARCHAR"></id>
+       <id column="password" property="password" jdbcType="VARCHAR"></id>
+       <id column="telephone" property="telephone" jdbcType="VARCHAR"></id>
+       <id column="mobile" property="mobile" jdbcType="VARCHAR"></id>
+       <id column="email" property="email" jdbcType="VARCHAR"></id>
+   </resultMap>
+   
+   
+   <select id="getAllMembers" resultType="Member">
+        select * from tbl_member
+   </select>
+   
+   <select id="getMemberByRealname" parameterType="string" resultType="Member">
+        select * from tbl_member where realname=#{realname}
+   </select>
+   <insert id="addMember" parameterType="Member" >
+        insert into sys_user(membertype,userid,realname,password,telephone,mobile,email) values(${membertype},${userid},#{realname},#{password},#{telephone},#{mobile},#{email})
+   </insert>
+   
+</mapper>
