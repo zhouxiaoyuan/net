@@ -22,5 +22,7 @@ public interface BrandDao {
 	
 	public List<Brand> getAllBrand();
 	
+	public void save(Brand brand);
+	
 	//public Brand getBrandByRealname(String realName);
 }
